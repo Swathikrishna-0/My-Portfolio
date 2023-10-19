@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Tooltip as ReactTooltip } from "react-tooltip";
-import { AppWrap } from "../../wrapper";
-// import { AppWrap, MotionWrap } from '../../wrapper';
+// import { Tooltip as ReactTooltip } from "react-tooltip";
+// import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from "../../client";
+// import Tooltip from '@mui/material/Tooltip';
 import "./Experiences.scss";
 
 const Experiences = () => {
@@ -39,16 +40,11 @@ const Experiences = () => {
                   >
                     <h4 className="bold-text">{work.name}</h4>
                     <p className="p-text">{work.company}</p>
-                    <p>{work.desc}</p>
+                    <p className="p-text-desc">{work.desc}</p>
                   </motion.div>
-                  <ReactTooltip
-                    id={work.name}
-                    effect="solid"
-                    arrowColor="#fff"
-                    className="skills-tooltip"
-                  >
-                    {work.desc}
-                  </ReactTooltip>
+                  {/* <Tooltip title={"Work Description"} className="p-text-desc">
+                    <button sx={{ m: 1 }}>{work.desc}</button>
+                  </Tooltip> */}
                 </>
               ))}
             </motion.div>
@@ -60,4 +56,5 @@ const Experiences = () => {
 };
 
 // export default Experiences
-export default AppWrap(Experiences, "app__skills-exp");
+// export default AppWrap(Experiences, "app__skills-exp"),'experience';
+export default AppWrap(MotionWrap(Experiences, "app__about"), "experience");
