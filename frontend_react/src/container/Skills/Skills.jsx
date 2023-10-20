@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 // import { Tooltip as ReactTooltip } from 'react-tooltip'
 // import { AppWrap } from '../../wrapper';
-import { AppWrap, MotionWrap } from '../../wrapper';
-import { urlFor, client } from '../../client';
-import './Skills.scss';
+import { AppWrap, MotionWrap } from "../../wrapper";
+import { urlFor, client } from "../../client";
+import "./Skills.scss";
 
 const Skills = () => {
   // const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
-
+  // const b = JSON.parse(JSON.stringify(skills));
   useEffect(() => {
     // const query = '*[_type == "experiences"]';
     const skillsQuery = '*[_type == "skills"]';
@@ -22,6 +22,12 @@ const Skills = () => {
       setSkills(data);
     });
   }, []);
+  
+
+  // const skillObj = JSON.stringify(skills);
+  // console.log(b,'stringifyyyy')
+
+ 
 
   return (
     <>
@@ -92,8 +98,8 @@ const Skills = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Skills, 'app__skills'),
-  'skills',
-  'app__whitebg',
+  MotionWrap(Skills, "app__skills"),
+  "skills",
+  "app__whitebg"
 );
 // export default AppWrap(Skills, 'app__skills');
