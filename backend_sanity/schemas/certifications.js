@@ -1,5 +1,5 @@
 export default {
-  name: 'Certifications',
+  name: 'certifications',
   title: 'Certifications',
   type: 'document',
   fields: [
@@ -16,7 +16,7 @@ export default {
     },
     {
       name: 'imgUrl',
-      title: 'ImgUrl',
+      title: 'ImageUrl',
       type: 'image',
       options: {
         hotspot: true,

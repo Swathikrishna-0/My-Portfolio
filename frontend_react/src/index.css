@@ -5,6 +5,13 @@
 
   --black-color: black;
   --white-color: #ffffff;
+  --light-pink-color: #e8b7d4;
+  --dark-pink-color: #a5678e;
+  --light-blue-color: #7facd6;
+  --dark-blue-color: #33539e;
+  --light-purple-color:#BFB8DA;
+  --cream-color:#fCFAF2;
+  --dark-cream-color:#FFBFC5;
 }
 
 * {
