@@ -15,62 +15,75 @@ const Navbar = () => {
       {/* <div className="app__navbar-logo">
         <img src={images.logo} alt="logo" />
       </div> */}
-      <div></div>
       <ul className="app__navbar-links">
         {["home", "about", "work", "skills", "experience"].map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
+          <li className="app__flex p-text linkss" key={`link-${item}`}>
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}
         <li className="app__flex p-text contact__nav">
-          <a href="#contact">Contact</a>
+          <a href="#contact" style={{color:"white"}}>Contact</a>
         </li>
       </ul>
 
       <div className="app__navbar-menu">
-        <HiMenuAlt4 onClick={() => setToggle(true)} className="nav_menu_icon" />
+        <div>
+          <HiMenuAlt4
+            onClick={() => setToggle(true)}
+            className="nav_menu_icon"
+          />
+        </div>
 
         {toggle && (
           <div className="motion_nav_div">
-          <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: "easeOut" }} 
-          >
-            <HiX onClick={() => setToggle(false)} />
-            <ul>
-              {["home", "about", "work", "skills", "contact"].map((item) => (
-                <li key={item} >
-                  <a href={`#${item}`} onClick={() => setToggle(false)} className="nav_a-link">
-                    {item}
-                  </a>
-                </li>
-              ))}
-              {/* <li>
-                <a
-                  href="https://www.linkedin.com/in/swathipriyamoru/"
-                  target="blank"
-                >
-                  <BsLinkedin />
-                </a>
-                <a
-                  href="https://www.instagram.com/swathipriya_0/"
-                  target="blank"
-                >
-                  <BsInstagram />
-                </a>
-              </li>
+            <motion.div
+              whileInView={{ x: [300, 0] }}
+              transition={{ duration: 0.85, ease: "easeOut" }}
+            >
+              <HiX onClick={() => setToggle(false)} className="close__icon" />
 
-              <li>
-                <a href="https://github.com/Swathikrishna-0">
-                  <BsGithub />
-                </a>
-                <a href="https://www.codingninjas.com/studio/profile/SwathiPriya">
-                  <TbHeartCode />
-                </a>
-              </li> */}
-            </ul>
-            
-          </motion.div>
+              <ul style={{ paddingTop: "60px" }}>
+                {["home", "about", "work", "skills", "contact"].map((item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item}`}
+                      onClick={() => setToggle(false)}
+                      className="nav_a-link"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="https://www.linkedin.com/in/swathipriyamoru/"
+                target="blank"
+                className="social__icon"
+              >
+                <BsLinkedin className="icon"/>
+              </a>
+              <a
+                href="https://www.instagram.com/swathipriya_0/"
+                target="blank"
+                className="social__icon"
+              >
+                <BsInstagram />
+              </a>
+              <a
+                href="https://github.com/Swathikrishna-0"
+                target="blank"
+                className="social__icon"
+              >
+                <BsGithub />
+              </a>
+              <a
+                href="https://www.codingninjas.com/studio/profile/SwathiPriya"
+                className="social__icon"
+                target="blank"
+              >
+                <TbHeartCode />
+              </a>
+            </motion.div>
           </div>
         )}
       </div>

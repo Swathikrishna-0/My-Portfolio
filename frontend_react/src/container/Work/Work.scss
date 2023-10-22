@@ -25,7 +25,7 @@
       margin: 0.5rem;
   
       &:hover {
-        background-color: var(--black-color);
+        background-color: var(--black);
         color: #fff;
       }
   
@@ -36,7 +36,7 @@
     }
   
     .item-active {
-      background-color: var(--black-color);
+      background-color: var(--black);
       color: #fff;
     }
   }
@@ -125,7 +125,7 @@
       svg {
         width: 50%;
         height: 50%;
-        color: var(--white-color);
+        color: var(--white);
       }
     }
   }

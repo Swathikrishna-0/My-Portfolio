@@ -1,14 +1,14 @@
 .app {
-    background-color: var(--white-color);
+    background-color: var(--white);
     font-family: var(--font-base);
   }
   
   .app__whitebg {
-    background-color: var(--white-color);
+    background-color: var(--white);
   }
   
-  .app__primarybg {
-    background-color: var(--pink-color);
+  .app__bg {
+    background-color: var(--background);
   }
   
   .app__container {
@@ -47,7 +47,7 @@
   
     p {
       text-transform: uppercase;
-      color: var(--black-color);
+      color: var(--black);
     }
   }
   
@@ -55,11 +55,11 @@
     font-size: 2.75rem;
     font-weight: 800;
     text-align: center;
-    color: var(--black-color);
+    color: var(--black);
     text-transform: capitalize;
   
     span {
-      color: var(--black-color);
+      color: var(--black);
     }
   
     @media screen and (min-width: 2000px) {
@@ -74,7 +74,7 @@
   .p-text {
     font-size: 0.8rem;
     text-align: left;
-    color: var(--black-color);
+    color: var(--black);
     line-height: 1.5;
   
     @media screen and (min-width: 2000px) {
@@ -85,7 +85,7 @@
   .bold-text {
     font-size: 1rem;
     font-weight: 800;
-    color: var(--black-color);
+    color: var(--black);
     text-align: left;
   
     @media screen and (min-width: 2000px) {
@@ -109,9 +109,9 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background-color: var(--white-color);
+      background-color: var(--white);
       margin: 0.25rem 0;
-      border: 1px solid var(--black-color);
+      border: 1px solid var(--black);
   
       display: flex;
       justify-content: center;
@@ -122,15 +122,15 @@
       svg {
         width: 15px;
         height: 15px;
-        color: var(--black-color);
+        color: var(--black);
       }
   
       &:hover {
-        background-color: var(--black-color);
-        border-color: var(--black-color);
+        background-color: var(--black);
+        border-color: var(--black);
   
         svg {
-          color: var(--white-color);
+          color: var(--white);
         }
       }
   
@@ -166,7 +166,7 @@
       transition: background-color 0.2s ease-in-out;
   
       &:hover {
-        background-color: var(--black-color);
+        background-color: var(--light-blue);
       }
   
       @media screen and (min-width: 2000px) {

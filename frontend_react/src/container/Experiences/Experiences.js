@@ -57,4 +57,4 @@ const Experiences = () => {
 
 // export default Experiences
 // export default AppWrap(Experiences, "app__skills-exp"),'experience';
-export default AppWrap(MotionWrap(Experiences, "app__about"), "experience");
+export default AppWrap(MotionWrap(Experiences, "app__about"), "experience","app__bg");
