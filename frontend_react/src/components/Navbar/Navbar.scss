@@ -79,7 +79,6 @@
 
       text-transform: uppercase;
       font-weight: 700;
-      font-size: large;
 
       transition: all 0.3s ease-in-out;
 
@@ -203,7 +202,7 @@
     color: var(--white) !important;
     &:hover {
       color: var(--light-blue) !important;
-      scale: 1.2;
+      scale: 1.1;
     }
   }
 }
