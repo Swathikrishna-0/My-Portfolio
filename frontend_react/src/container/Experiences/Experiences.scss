@@ -1,15 +1,31 @@
 .app__skills-exp {
   margin-top: 3rem;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-
   @media screen and (max-width: 900px) {
     margin-top: 2rem;
   }
 }
-
+.education {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 10px;
+  height: cover;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(
+    to right,
+    var(--dark-blue),
+    var(--light-blue)
+  );
+}
 .app__skills-exp-item {
   width: 100%;
   display: flex;
@@ -23,10 +39,11 @@
   .app__skills-exp-work {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     margin-bottom: 1rem;
     cursor: pointer;
+    width: 70%;
 
     h4 {
       font-weight: 500;
@@ -57,6 +74,7 @@
   text-align: left;
   color: var(--black);
   line-height: 1.5;
+  white-space: pre-line;
 
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem;
@@ -80,3 +98,28 @@
 //       line-height: 2 !important;
 //     }
 //   }
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+}
+.expp {
+  width: 100%;
+  margin-left: 10%;
+  @media screen and (min-width: 900px), (max-width: 2000) {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .para-none {
+    display: none;
+  }
+}
+.education22{
+  margin-right: 30px;
+}
+.education223{
+  margin-right: -20px;
+}

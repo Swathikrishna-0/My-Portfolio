@@ -13,9 +13,35 @@ export default {
                 type:'string'
             },
             {
-                name:'desc',
-                title:'Desc',
+                name:'desc0',
+                title:'Desc0',
+                type:'string'
+            },
+            {
+                name:'desc1',
+                title:'Desc1',
+                type:'string'
+            },
+            {
+                name:'desc2',
+                title:'Desc2',
+                type:'string'
+            },
+            {
+                name:'desc3',
+                title:'Desc3',
+                type:'string'
+            },
+            {
+                name:'desc4',
+                title:'Desc4',
+                type:'string'
+            },
+            {
+                name:'desc5',
+                title:'Desc5',
                 type:'string'
             }
-    ]
+    ],
+   
 }

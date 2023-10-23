@@ -84,7 +84,7 @@ const Certifications = () => {
   );
 };
 
-export default AppWrap(MotionWrap(Certifications, "app__certifications"),"","app__primarybg");
+export default AppWrap(MotionWrap(Certifications, "app__certifications"),"certifications","app__primarybg");
 // export default AppWrap(
 //   MotionWrap(Work, 'app__works'),
 //   'work',

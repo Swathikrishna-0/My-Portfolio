@@ -37,7 +37,7 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text">
+      <h2 className="head-text work__head">
         My Creative <span>Portfolio</span> Section
       </h2>
 
@@ -101,7 +101,7 @@ const Work = () => {
 
             <div className="app__work-content app__flex">
               <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>
+              <p className="p-text" style={{ marginTop: 10, textAlign:"center"}}>
                 {work.description}
               </p>
 
