@@ -10,7 +10,6 @@ const Certifications = () => {
 
   useEffect(() => {
     const query = '*[_type == "certifications"]';
-
     client.fetch(query).then((data) => {
       setCertifications(data);
     });
@@ -21,16 +20,15 @@ const Certifications = () => {
       <h2 className="head-text main-head">Certifications</h2>
       <motion.div
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__work-portfolio"
+        className="app__cert-portfolio"
       >
         {certifications.map((certification) => (
           <div className="certifications__main">
-            <div className="app__work-img app__flex">
+            <div className="app__cert-img app__flex">
               <img
                 src={urlFor(certification.imgUrl)}
                 alt={certification.certificationName}
               />
-
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{
@@ -40,8 +38,11 @@ const Certifications = () => {
                 }}
                 className="app__work-hover app__flex"
               >
-                <a href={certification.credentialURL} target="_blank"
-                  rel="noreferrer">
+                <a
+                  href={certification.credentialURL}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
@@ -54,11 +55,12 @@ const Certifications = () => {
               </motion.div>
             </div>
 
-            <div className="app__work-content app__flex">
+            <div
+              className="app__cert-content app__flex"
+              style={{ color: "white" }}
+            >
               <h4 className="bold-text">{certification.certificationName}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>
-                {certification.issuingOrg}
-              </p>
+              <p className="p-text">{certification.issuingOrg}</p>
             </div>
           </div>
         ))}
@@ -84,7 +86,11 @@ const Certifications = () => {
   );
 };
 
-export default AppWrap(MotionWrap(Certifications, "app__certifications"),"certifications","app__primarybg");
+export default AppWrap(
+  MotionWrap(Certifications, "app__certifications"),
+  "certifications",
+  "app__bg"
+);
 // export default AppWrap(
 //   MotionWrap(Work, 'app__works'),
 //   'work',

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-
-import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
 import "./Footer.scss";
+
+import { AiFillMail, AiFillPhone } from "react-icons/ai";
+import { TiLocation } from "react-icons/ti";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -41,74 +42,101 @@ const Footer = () => {
   };
 
   return (
-    <>
-      <h2 className="head-text">Take a coffee & chat with me</h2>
-
-      <div className="app__footer-cards">
-        <div className="app__footer-card">
-          <img src={images.email} alt="email" />
-          <a href="mailto:swathipriyamoru@gmail.com" className="p-text">
-            swathipriyamoru@gmail.com
-          </a>
-        </div>
-        <div className="app__footer-card">
-          <img src={images.mobile} alt="phone" />
-          <a href="tel:+91 9912576665" className="p-text">
-            +91 9912576665
-          </a>
-        </div>
-      </div>
-      {!isFormSubmitted ? (
-        <div className="app__footer-form app__flex">
-          <div className="app__flex">
-            <input
-              className="p-text"
-              type="text"
-              placeholder="Your Name"
-              name="username"
-              value={username}
-              onChange={handleChangeInput}
-            />
+    <div className="main__footer">
+      <h2 className="head-text" style={{ color: "white", margin: "35px" }}>
+        Contact
+      </h2>
+      <div className="footer__contianer">
+        <div className="contact_container">
+          <h2
+            className="p-text"
+           
+          >
+            Drop a Message
+          </h2>
+          <p className="p-text">
+            Thank you for taking the time to explore my portfolio. I'm
+            passionate about my work and always eager to embark on new creative
+            journeys. If you have any questions or opportunities to discuss,
+            please don't hesitate to reach out. Let's create something
+            remarkable together!
+          </p>
+          <div className="contact_card">
+            <div className="icon__style">
+              <AiFillMail style={{ color: "white" }} className="icons" />
+            </div>
+            <a href="mailto:swathipriyamoru@gmail.com" className="p-text">
+              swathipriyamoru@gmail.com
+            </a>
           </div>
-          <div className="app__flex">
-            <input
-              className="p-text"
-              type="email"
-              placeholder="Your Email"
-              name="email"
-              value={email}
-              onChange={handleChangeInput}
-            />
+          <div className="contact_card">
+            <div className="icon__style">
+              <AiFillPhone style={{ color: "white" }} className="icons" />
+            </div>
+            <a href="tel:+91 9912576665" className="p-text">
+              +91 9912576665
+            </a>
           </div>
+          <div className="contact_card">
+            <div className="icon__style">
+              <TiLocation style={{ color: "white" }} className="icons" />
+            </div>
+            <a href="tel:+91 9912576665" className="p-text">
+              +91 9912576665
+            </a>
+          </div>
+        </div>
+        {!isFormSubmitted ? (
+          <div className="message__container">
+            <div>
+              <input
+                className="p-text"
+                type="text"
+                placeholder="Your Name"
+                name="username"
+                value={username}
+                onChange={handleChangeInput}
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                placeholder="Your Email"
+                name="email"
+                value={email}
+                onChange={handleChangeInput}
+              />
+            </div>
+            <div>
+              <textarea
+                placeholder="Your Message"
+                value={message}
+                name="message"
+                onChange={handleChangeInput}
+              />
+            </div>
+            <button type="button" onClick={handleSubmit}>
+              {!loading ? "Send Message" : "Sending..."}
+            </button>
+          </div>
+        ) : (
           <div>
-            <textarea
-              className="p-text"
-              placeholder="Your Message"
-              value={message}
-              name="message"
-              onChange={handleChangeInput}
-            />
+            <h3>Thank you for getting in touch!</h3>
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>
-            {!loading ? "Send Message" : "Sending..."}
-          </button>
-        </div>
-      ) : (
-        <div>
-          <h3 className="head-text">Thank you for getting in touch!</h3>
-        </div>
-      )}
-
-      <div className="copyright">
-        <p className="p-text">@2023 Swathi</p>
-        <p className="p-text">All rights reserved</p>
+        )}
       </div>
-    </>
+      <div>
+        <p>@2023 Swathi</p>
+        <p>All rights reserved</p>
+      </div>
+    </div>
   );
 };
 
 export default AppWrap(
-  MotionWrap(Footer, "app__footer"),
+  MotionWrap(Footer, "main__footer"),
   "contact",
   "app__bg"
 );
+
+

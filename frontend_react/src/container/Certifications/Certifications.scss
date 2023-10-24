@@ -1,9 +1,67 @@
-.certifications__main{
-    border-radius: 10px;
-    background-color: white;
-    padding: 15px;
-    margin: 20px;
-}
 .main-head{
     margin-bottom: 25px;
+    color: var(--white);
 }
+.app__cert-portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+    .certifications__main{
+      width: 180px;
+      flex-direction: column;
+      height: 220px;
+      margin: 2rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      background: linear-gradient(to right, var(--light-blue),var(--dark-blue));
+      color: var(--white);
+  
+      cursor: pointer;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      }
+  
+      @media screen and (min-width: 2000px) {
+        width: 470px;
+        padding: 1.25rem;
+        border-radius: 0.75rem;
+      }
+  
+      @media screen and (max-width: 300px) {
+        width: 100%;
+        margin: 1rem;
+      }
+    }
+}
+.app__cert-img {
+    width: 100%;
+    height: 150px;
+   background-color: white;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+      object-fit: cover;
+    }
+  
+    @media screen and (min-width: 2000px) {
+      height: 350px;
+    }
+  }
+  .app__cert-content {
+    padding: 0.5rem;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+  
+    h4 {
+      @media screen and (min-width: 2000px) {
+        margin-top: 3rem;
+      }
+    }
+  }
