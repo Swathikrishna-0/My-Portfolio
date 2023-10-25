@@ -36,7 +36,7 @@ const Certifications = () => {
                   ease: "easeInOut",
                   staggerChildren: 0.5,
                 }}
-                className="app__work-hover app__flex"
+                className="app__cert-hover app__flex"
               >
                 <a
                   href={certification.credentialURL}

@@ -43,17 +43,15 @@ const Footer = () => {
 
   return (
     <div className="main__footer">
+      {/* <div className="round__container">
+          <div className="round__left"></div>
+        </div> */}
       <h2 className="head-text" style={{ color: "white", margin: "35px" }}>
         Contact
       </h2>
       <div className="footer__contianer">
         <div className="contact_container">
-          <h2
-            className="p-text"
-           
-          >
-            Drop a Message
-          </h2>
+          <h2 className="p-text head__drop">Drop a Message</h2>
           <p className="p-text">
             Thank you for taking the time to explore my portfolio. I'm
             passionate about my work and always eager to embark on new creative
@@ -81,8 +79,13 @@ const Footer = () => {
             <div className="icon__style">
               <TiLocation style={{ color: "white" }} className="icons" />
             </div>
-            <a href="tel:+91 9912576665" className="p-text">
-              +91 9912576665
+            <a
+              href="https://maps.app.goo.gl/GxsypGtZs9MsjrUb6"
+              className="p-text"
+            >
+              3-156, Narayanapuram, <br /> Unguturu Mandal, West Godavari
+              District, <br />
+              Andhra Pradesh, India 534406.
             </a>
           </div>
         </div>
@@ -112,7 +115,9 @@ const Footer = () => {
                 placeholder="Your Message"
                 value={message}
                 name="message"
+                type="text"
                 onChange={handleChangeInput}
+                className="textareaa"
               />
             </div>
             <button type="button" onClick={handleSubmit}>
@@ -120,15 +125,16 @@ const Footer = () => {
             </button>
           </div>
         ) : (
-          <div>
+          <div className="message_note">
             <h3>Thank you for getting in touch!</h3>
           </div>
         )}
       </div>
-      <div>
+      {/* <div>
         <p>@2023 Swathi</p>
         <p>All rights reserved</p>
-      </div>
+      </div> */}
+      {/* <div className="round__right"></div> */}
     </div>
   );
 };
@@ -138,5 +144,4 @@ export default AppWrap(
   "contact",
   "app__bg"
 );
-
-
+// export default MotionWrap(Footer, "contact");
