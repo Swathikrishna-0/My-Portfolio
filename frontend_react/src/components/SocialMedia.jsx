@@ -4,9 +4,11 @@ import { TbHeartCode } from "react-icons/tb";
 const SocialMedia = () => {
   return (
     <div className="app__social">
-      <a href="https://www.linkedin.com/in/swathipriyamoru/" target="blank">
-        <BsLinkedin />
-      </a>
+      <div>
+        <a href="https://www.linkedin.com/in/swathipriyamoru/" target="blank">
+          <BsLinkedin />
+        </a>
+      </div>
       <div>
         <a href="https://www.instagram.com/swathipriya_0/" target="blank">
           <BsInstagram />
@@ -18,7 +20,10 @@ const SocialMedia = () => {
         </a>
       </div>
       <div>
-        <a href="https://www.codingninjas.com/studio/profile/SwathiPriya" target="blank">
+        <a
+          href="https://www.codingninjas.com/studio/profile/SwathiPriya"
+          target="blank"
+        >
           <TbHeartCode />
         </a>
       </div>

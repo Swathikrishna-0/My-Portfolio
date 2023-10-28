@@ -10,6 +10,7 @@ import {
 } from "./container";
 import { Navbar } from "./components";
 import "./App.scss";
+import {SocialMedia} from "./components";
 
 const App = () => {
   return (
@@ -23,8 +24,10 @@ const App = () => {
         <Experiences />
         <Certifications />
         <Footer />
+        <div className="social__media">
+          <SocialMedia />
+        </div>
       </div>
-     
     </>
   );
 };

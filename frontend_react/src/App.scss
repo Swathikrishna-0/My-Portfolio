@@ -93,9 +93,13 @@
   
   .app__social {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
+    // justify-content: flex-end;
+    // align-items: center;
+    // flex-direction: column;
+    div{
+      margin: 10px;
+      margin-top: -20px;
+    }
   
     padding: 1rem;
   
@@ -180,4 +184,10 @@
       padding: 2rem;
     }
   }
- 
+ .social__media{
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+ }
