@@ -18,6 +18,7 @@ import sass from "../assets/sass.png";
 import typescript from "../assets/typescript.png";
 import vue from "../assets/vue.png";
 import mesage from "../assets/mesage.png";
+import resume from '../assets/SwathiPriyaMoru.pdf'
 
 import about01 from "../assets/about01.png";
 import about02 from "../assets/about02.png";
@@ -40,6 +41,7 @@ import robo from "../assets/robo.png"
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
+  resume,
   phone,
   mesage,
   robo,

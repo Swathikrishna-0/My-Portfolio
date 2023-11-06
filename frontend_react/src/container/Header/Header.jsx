@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 import "./Header.scss";
+import { BiDownload } from "react-icons/bi";
 
 const scaleVariants = {
   whileInView: {
@@ -36,6 +37,12 @@ const Header = () => (
           <p className="p-text color-white">Full Stack Developer</p>
           <p className="p-text color-white">Frontend Developer</p>
         </div>
+        <a href={images.resume} download style={{textDecoration:"none"}}>
+          <button className="resume-button">
+              <BiDownload fontSize={20} />
+            &nbsp;&nbsp;Download Resume
+          </button>
+        </a>
       </div>
     </motion.div>
 
@@ -65,7 +72,6 @@ const Header = () => (
         </div>
       ))}
     </motion.div>
-    
   </div>
 );
 
