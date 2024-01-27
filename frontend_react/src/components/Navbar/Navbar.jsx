@@ -1,91 +1,74 @@
-import React, { useState } from "react";
-import { HiMenuAlt4, HiX } from "react-icons/hi";
-import { motion } from "framer-motion";
-
-// import { images } from "../../constants";
+import React from "react";
 import "./Navbar.scss";
-import { BsLinkedin, BsInstagram, BsGithub } from "react-icons/bs";
-import { TbHeartCode } from "react-icons/tb";
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false);
-
   return (
     <nav className="app__navbar">
-      {/* <div className="app__navbar-logo">
-        <img src={images.logo} alt="logo" />
-      </div> */}
-      <ul className="app__navbar-links">
-        {["home", "about", "work", "skills", "experience","certifications"].map((item) => (
-          <li className="app__flex p-text linkss" key={`link-${item}`}>
-            <a href={`#${item}`}>{item}</a>
+      <div className="app_navvvv">
+        <ul className="app__navbar-links">
+          {[
+            "home",
+            "about",
+            "work",
+            "skills",
+            "experience",
+            "certifications",
+          ].map((item) => (
+            <li className="app__flex p-text linkss" key={`link-${item}`}>
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          ))}
+          <li className="app__flex p-text contact__nav">
+            <a href="#contact" style={{ color: "white" }}>
+              Contact
+            </a>
           </li>
-        ))}
-        <li className="app__flex p-text contact__nav">
-          <a href="#contact" style={{color:"white"}}>Contact</a>
-        </li>
-      </ul>
+        </ul>
+      </div>
 
-      <div className="app__navbar-menu">
-        <div>
-          <HiMenuAlt4
-            onClick={() => setToggle(true)}
-            className="nav_menu_icon"
-          />
+      <div className="nav_menu_div">
+        <button
+          id="dropdownMenuIconButton"
+          data-dropdown-toggle="dropdownDots"
+          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          type="button"
+          className="nav_menu_icon"
+        >
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 4 15"
+          >
+            <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+          </svg>
+        </button>
+
+        <div
+          id="dropdownDots"
+          class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+          className="menubutton"
+        >
+          <ul
+            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="dropdownMenuIconButton"
+          >
+            {[
+              "home",
+              "about",
+              "work",
+              "skills",
+              "experience",
+              "certifications",
+              "contact",
+            ].map((item) => (
+              <li key={`link-${item}`} className="app__flex p-text side__nav_bar">
+                <a href={`#${item}`} className="anchortag">{item}</a>
+              </li>
+            ))}
+          </ul>
         </div>
-
-        {toggle && (
-          <div className="motion_nav_div">
-            <motion.div
-              whileInView={{ x: [300, 0] }}
-              transition={{ duration: 0.85, ease: "easeOut" }}
-            >
-              <HiX onClick={() => setToggle(false)} className="close__icon" />
-
-              <ul style={{ paddingTop: "60px" }}>
-                {["home", "about", "work", "skills", "contact"].map((item) => (
-                  <li key={item}>
-                    <a
-                      href={`#${item}`}
-                      onClick={() => setToggle(false)}
-                      className="nav_a-link"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://www.linkedin.com/in/swathipriyamoru/"
-                target="blank"
-                className="social__icon"
-              >
-                <BsLinkedin className="icon"/>
-              </a>
-              <a
-                href="https://www.instagram.com/swathipriya_0/"
-                target="blank"
-                className="social__icon"
-              >
-                <BsInstagram />
-              </a>
-              <a
-                href="https://github.com/Swathikrishna-0"
-                target="blank"
-                className="social__icon"
-              >
-                <BsGithub />
-              </a>
-              <a
-                href="https://www.codingninjas.com/studio/profile/SwathiPriya"
-                className="social__icon"
-                target="blank"
-              >
-                <TbHeartCode />
-              </a>
-            </motion.div>
-          </div>
-        )}
       </div>
     </nav>
   );
