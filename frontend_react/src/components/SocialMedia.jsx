@@ -1,9 +1,10 @@
 import React from "react";
 import { BsLinkedin, BsInstagram, BsGithub } from "react-icons/bs";
 import { TbHeartCode } from "react-icons/tb";
+
 const SocialMedia = () => {
   return (
-    <div className="app__social">
+    <div className="app__social_mobile">
       <div>
         <a href="https://www.linkedin.com/in/swathipriyamoru/" target="blank">
           <BsLinkedin />
