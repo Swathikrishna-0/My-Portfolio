@@ -1,3 +1,7 @@
+// Major Pink - #E82E81  
+// Minior Pink - #B02261 (used only on hover)
+// 
+
 .app {
     font-family: var(--font-base);
   }
@@ -107,9 +111,9 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: linear-gradient(to left,var(--light-blue),var(--dark-blue));
+      background-color: #E82E81;
       margin: 0.25rem 0;
-      border: 1px solid var(--dark-blue);
+      border: 1px solid #E82E81 ;
       margin-bottom: 13px;
       display: flex;
       justify-content: center;
@@ -124,8 +128,8 @@
       }
   
       &:hover {
-        background: linear-gradient(to right,var(--light-blue),var(--dark-blue));
-        border-color: var(--light-blue);
+        background-color: #B02261;
+        border-color: #B02261;
   
         svg {
           color: var(--white);
@@ -213,9 +217,9 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: linear-gradient(to left,var(--light-blue),var(--dark-blue));
+    background-color: #E82E81 ;
     margin: 0.25rem 0;
-    border: 1px solid var(--dark-blue);
+    border: 1px solid #E82E81 ;
     margin-bottom: 13px;
     display: flex;
     justify-content: center;
@@ -230,8 +234,8 @@
     }
 
     &:hover {
-      background: linear-gradient(to right,var(--light-blue),var(--dark-blue));
-      border-color: var(--light-blue);
+      background-color: #B02261;
+      border-color: #B02261;
 
       svg {
         color: var(--white);

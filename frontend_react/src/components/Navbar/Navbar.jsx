@@ -19,7 +19,7 @@ const Navbar = () => {
             </li>
           ))}
           <li className="app__flex p-text contact__nav">
-            <a href="#contact" style={{ color: "white" }}>
+            <a href="#contact" style={{ color: "white",fontSize:"0.8rem" }}>
               Contact
             </a>
           </li>
@@ -47,7 +47,7 @@ const Navbar = () => {
 
         <div
           id="dropdownDots"
-          class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+          class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-50 dark:bg-gray-700 dark:divide-gray-600"
           className="menubutton"
         >
           <ul

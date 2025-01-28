@@ -1,37 +1,19 @@
 .app__navbar {
   width: 100%;
   padding: 1rem 2rem;
-  background: rgba(16, 23, 51, 0.5);
+  background: rgba(51, 16, 48, 0.342);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
-  align-items: center;// box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid #101733;
+  align-items: center;
   position: fixed;
   z-index: 2;
- 
 }
-
-// .app__navbar-logo {
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-
-//   img {
-//     width: 90px;
-//     height: 20px;
-
-//     @media screen and (min-width: 2000px) {
-//       width: 180px;
-//       height: 40px;
-//     }
-//   }
-// }
 .menubutton{
   width: 130px;
-  background: linear-gradient(to left, var(--light-blue), var(--dark-blue));
-  box-shadow: 0px 0px 20px var(--dark-blue);
+  background-color: #E82E81 ;
+  box-shadow: 0px 0px 20px #E82E81 ;
   border-radius: 20px;
 }
 .nav_menu_div {
@@ -47,13 +29,13 @@
   border-radius: 15px;
   padding: 15px;
   color: white;
-  background: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+  background-color: #E82E81 ;
   &:hover {
-    background: linear-gradient(to left, var(--light-blue), var(--dark-blue));
+    background-color: #B02261;
   }
 }
 .contact__nav {
-  background: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+  background-color: #E82E81;
   padding: 10px;
   width: 150px;
   border-radius: 10px;
@@ -61,26 +43,17 @@
     color: --white;
   }
   &:hover {
-    background: linear-gradient(to left, var(--light-blue), var(--dark-blue));
-  }
-}
-.close__icon {
-  height: 60px;
-  width: 60px;
-  margin: 10px;
-  border-radius: 50%;
-  background: linear-gradient(to right, var(--light-blue), var(--dark-blue));
-  &:hover {
-    background: linear-gradient(to left, var(--light-blue), var(--dark-blue));
+    background-color: #B02261;
   }
 }
 .side__nav_bar{
   text-transform: uppercase;
-  padding-bottom:6px;
-  padding: 2px;
+  padding-bottom:5px;
+  padding: 5px;
   color: white;
   &:hover{
-    color: var(--background);
+    font-size: 14px;
+    font-weight: bold;
   }
 }
 .app__navbar-links {
@@ -111,131 +84,14 @@
     display: none;
   }
 }
-.nav-icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-.nav_a-link {
-  color: var(--white);
 
-  &:hover {
-    color: var(--light-blue) !important;
-    cursor: pointer;
-  }
-}
-.motion_nav_div {
-  height: 100vh;
-  box-shadow: 0px 0px 20px rgba(16, 23, 51, 0.5);
-  background-color: rgba(12, 20, 51, 0.968);
-}
-
-.app__navbar-menu {
-  width: 60px;
-  height: 60px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  svg {
-    width: 70%;
-    height: 70%;
-    color: var(--white);
-    padding: 5px;
-  }
-
-  div {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 5;
-
-    padding: 1rem;
-
-    width: 80%;
-    height: 100vh;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    flex-direction: column;
-
-    background-size: cover;
-    background-repeat: repeat;
-
-    /* top box shadow */
-
-    svg {
-      width: 40px;
-      height: 40px;
-      color: var(--white);
-      // background: linear-gradient(to right, #7facd6, #33539e);
-
-      // &:hover {
-      //   background: linear-gradient(to right, #e8b7d4, #a5678e);
-      // }
-    }
-
-    ul {
-      list-style: none;
-      height: 100%;
-      width: 100%;
-
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      flex-direction: column;
-
-      li {
-        margin: 1rem;
-
-        a {
-          // color: var(--black);
-          text-decoration: none;
-          font-size: 1rem;
-          text-transform: uppercase;
-          font-weight: 700;
-          font-size: large;
-
-          transition: all 0.3s ease-in-out;
-
-          // &:hover {
-          //   color: var(--black);
-          // }
-        }
-      }
-    }
-
-    @media screen and (min-width: 900px) {
-      display: none;
-    }
-  }
-
-  @media screen and (min-width: 900px) {
-    display: none;
-  }
-}
 .linkss {
   a {
     color: var(--white) !important;
     &:hover {
-      color: var(--light-blue) !important;
+      color: #E82E81  !important;
       scale: 1.1;
     }
   }
 }
 
-.social__icon {
-  height: 35px;
-  width: 35px;
-  margin-right: 30px;
-  margin-bottom: 10px;
-  svg {
-    &:hover {
-      color: var(--light-blue);
-    }
-  }
-}

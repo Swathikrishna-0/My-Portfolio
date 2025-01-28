@@ -46,9 +46,6 @@ const Footer = () => {
   return (
     <>
       <div className="main__footer">
-        {/* <div className="round__container">
-          <div className="round__left"></div>
-        </div> */}
         <h2 className="head-text" style={{ color: "white", margin: "35px" }}>
           Contact
         </h2>
@@ -133,11 +130,6 @@ const Footer = () => {
             </div>
           )}
         </div>
-        {/* <div>
-        <p>@2023 Swathi</p>
-        <p>All rights reserved</p>
-      </div> */}
-        {/* <div className="round__right"></div> */}
         <div className="button-resume">
           <a href={images.resume} download style={{ textDecoration: "none" }}>
             <button className="resume-button">
@@ -159,4 +151,3 @@ export default AppWrap(
   "contact",
   "app__bg"
 );
-// export default MotionWrap(Footer, "contact");
