@@ -6,6 +6,7 @@ import { AiFillMail, AiFillPhone } from "react-icons/ai";
 import { TiLocation } from "react-icons/ti";
 import { BiDownload } from "react-icons/bi";
 import { images } from "../../constants";
+import { SocialMedia } from "../../components";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -138,15 +139,17 @@ const Footer = () => {
       </div> */}
         {/* <div className="round__right"></div> */}
         <div className="button-resume">
-        <a href={images.resume} download style={{textDecoration:"none"}}>
-          <button className="resume-button">
+          <a href={images.resume} download style={{ textDecoration: "none" }}>
+            <button className="resume-button">
               <BiDownload fontSize={20} />
-            &nbsp;&nbsp;Download Resume
-          </button>
-        </a>
+              &nbsp;&nbsp;Download Resume
+            </button>
+          </a>
+        </div>
+        <div className="social__media">
+          <SocialMedia />
         </div>
       </div>
-     
     </>
   );
 };

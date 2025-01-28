@@ -10,7 +10,6 @@ import {
 } from "./container";
 import { Navbar } from "./components";
 import "./App.scss";
-import { SocialMedia } from "./components";
 import { BsLinkedin, BsInstagram, BsGithub } from "react-icons/bs";
 import { TbHeartCode } from "react-icons/tb";
 
@@ -53,10 +52,7 @@ const App = () => {
         <Skills />
         <Experiences />
         <Certifications />
-        <Footer />
-        <div className="social__media">
-          <SocialMedia />
-        </div>
+        <Footer />   
       </div>
     </>
   );

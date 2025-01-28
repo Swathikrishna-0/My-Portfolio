@@ -7,29 +7,6 @@ import "./About.scss";
 import { urlFor, client } from "../../client";
 
 const About = () => {
-  // const abouts = [
-  //   {
-  //     title: "Web Development",
-  //     description: "I am a good web developer",
-  //     imgUrl: images.about01,
-  //   },
-  //   {
-  //     title: "Frontend",
-  //     description: "I am a good web developer",
-  //     imgUrl: images.about02,
-  //   },
-  //   {
-  //     title: "Full-Stack Development",
-  //     description: "I am a good web developer",
-  //     imgUrl: images.about03,
-  //   },
-  //   {
-  //     title: "Full-Stack Development",
-  //     description: "I am a good web developer",
-  //     imgUrl: images.about04,
-  //   },
-  // ];
-
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
