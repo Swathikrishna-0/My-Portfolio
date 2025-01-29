@@ -38,14 +38,19 @@ import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 import robo from "../assets/robo.png"
-
+import header from "../assets/header.png"
+import headercircle from "../assets/header-circle.png";
+import headerFire from "../assets/header-fire.png";
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
+  header,
   resume,
   phone,
   mesage,
   robo,
   email,
+  headercircle,
+  headerFire,
   mobile,
   api,
   cpp,

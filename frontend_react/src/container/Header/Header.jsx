@@ -1,40 +1,83 @@
 import React from "react";
-import { motion } from "framer-motion";
-
+// import { motion } from "framer-motion";
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 import "./Header.scss";
-import { BiDownload } from "react-icons/bi";
+import { BsLinkedin, BsInstagram, BsGithub } from "react-icons/bs";
+import { TbHeartCode } from "react-icons/tb";
+import { IoDocumentTextSharp } from "react-icons/io5";
 
-// const scaleVariants = {
-//   whileInView: {
-//     scale: [0, 1],
-//     opacity: [0, 1],
-//     transition: {
-//       duration: 1,
-//       ease: "easeInOut",
-//     },
-//   },
-// };
-
+const handleClick = () => {
+  window.open(
+    "https://drive.google.com/file/d/14RCaZOqawrPVD_I92p2fgA5FhZAJApjo/view?usp=sharing",
+    "_blank"
+  );
+};
 const Header = () => (
-  <div className="app__header app__flex">
-    <motion.div
-      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-      transition={{ duration: 0.5 }}
-      className="app__header-info"
-    >
-      <div className="app__header-badge">
-        <a href={images.resume} download style={{textDecoration:"none"}}>
-          <button className="resume-button">
-              <BiDownload fontSize={20} />
-            &nbsp;&nbsp;Download Resume
-          </button>
-        </a>
+  <>
+    <div className="app__header">
+      <div className="header_left">
+        <div className="header__content">
+          <img
+            src={images.headercircle}
+            className="header-circle"
+            alt="circle"
+          />
+          <img src={images.header} className="header-pic" alt="header" />
+          <h2>Swathi Priya</h2>
+          <img src={images.headerFire} className="header-fire" alt="fire" />
+          <h4>
+            I'm a Software Engineer passionate about creating web applications
+            using modern technology.
+          </h4>
+          <div className="app__social">
+            <div>
+              <a
+                href="https://www.linkedin.com/in/swathipriyamoru/"
+                target="blank"
+              >
+                <BsLinkedin />
+              </a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/swathipriya_0/" target="blank">
+                <BsInstagram />
+              </a>
+            </div>
+            <div>
+              <a href="https://github.com/Swathikrishna-0" target="blank">
+                <BsGithub />
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.codingninjas.com/studio/profile/SwathiPriya"
+                target="blank"
+              >
+                <TbHeartCode />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </motion.div>
-  </div>
+      <div className="header_right">
+        <h1>FULL-STACK</h1>
+        <br />
+        <h1 className="developer">DEVELOPER</h1>
+        <p>
+          Passionate about creating intuitive and engaging user experiences.
+          Specialize in transforming ideas into beautifully crafted products.
+        </p>
+        <div className="content__item">
+          <button className="button button--janus" onClick={handleClick}></button>{" "}
+          <span className="button-text">
+            <IoDocumentTextSharp className="resume-icon" />
+            View Resume
+          </span>
+        </div>
+      </div>
+    </div>
+  </>
 );
 
 export default AppWrap(Header, "home");
-// export default Header;
