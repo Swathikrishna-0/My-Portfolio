@@ -40,12 +40,12 @@ const About = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           >
             <div className="stat-box">
-              <h2>53</h2>
+              <h2>30+</h2>
               <p>Completed Projects</p>
             </div>
             <div className="stat-box">
-              <h2>6</h2>
-              <p>Positive Reviews</p>
+              <h2>2.5+</h2>
+              <p>Years of Experience</p>
             </div>
           </motion.div>
         </motion.div>
