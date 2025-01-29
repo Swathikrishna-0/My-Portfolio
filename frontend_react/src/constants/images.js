@@ -41,8 +41,10 @@ import robo from "../assets/robo.png"
 import header from "../assets/header.png"
 import headercircle from "../assets/header-circle.png";
 import headerFire from "../assets/header-fire.png";
+import Aboutme from "../assets/about-me.png";
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
+  Aboutme,
   header,
   resume,
   phone,
