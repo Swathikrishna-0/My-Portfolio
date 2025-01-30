@@ -1,0 +1,135 @@
+.app__education {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    .education__head {
+      font-size: 80px;
+      font-weight: 700;
+      font-family: "Poppins", sans-serif;
+      color: rgb(255, 255, 255);
+      margin-bottom: 70px;
+      text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size: 50px;
+        margin-bottom: 30px;
+      }
+      span {
+        color: rgba(255, 255, 255, 0.24);
+      }
+    }
+  }
+  
+  .app__education-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+  
+  .app__education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background-color: #e82e81;
+    }
+  }
+  
+  .app__education-item {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    position: relative;
+  
+    .app__education-year {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #e82e81;
+      width: 100px;
+      text-align: right;
+    }
+  
+    .app__education-content {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border-left: 4px solid #e82e81;
+  
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 0.5rem;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 0.5rem;
+      }
+  
+      .description {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+  
+  .app__certifications {
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 0.75rem;
+        padding-left: 1rem;
+        position: relative;
+  
+        &::before {
+          content: "•";
+          color: #e82e81;
+          font-size: 1.5rem;
+          position: absolute;
+          left: -10px;
+          top: -2px;
+        }
+  
+        a {
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.8);
+          transition: all 0.3s ease-in-out;
+  
+          &:hover {
+            color: #e82e81;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  

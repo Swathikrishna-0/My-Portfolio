@@ -9,10 +9,10 @@ const Navbar = () => {
           {[
             "home",
             "about",
-            "work",
+            "projects",
             "skills",
+            "education",
             "experience",
-            "certifications",
           ].map((item) => (
             <li className="app__flex p-text linkss" key={`link-${item}`}>
               <a href={`#${item}`}>{item}</a>
@@ -57,10 +57,10 @@ const Navbar = () => {
             {[
               "home",
               "about",
-              "work",
+              "projects",
               "skills",
+              "education",
               "experience",
-              "certifications",
               "contact",
             ].map((item) => (
               <li key={`link-${item}`} className="app__flex p-text side__nav_bar">

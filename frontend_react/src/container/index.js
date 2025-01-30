@@ -5,3 +5,4 @@ export { default as Skills } from "./Skills/Skills";
 export { default as Work } from "./Work/Work";
 export { default as Experiences } from "./Experiences/Experiences";
 export {default as Certifications} from "./Certifications/Certifications"
+export {default as Education} from "./Education/Education"

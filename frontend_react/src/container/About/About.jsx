@@ -1,16 +1,69 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
 import { images } from "../../constants";
 
 const About = () => {
+  const [completedProjects, setCompletedProjects] = useState(0);
+  const [yearsOfExperience, setYearsOfExperience] = useState(0);
+  const [isVisible, setIsVisible] = useState(false); 
+  const aboutRef = useRef(null); 
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true); 
+          observer.disconnect(); 
+        }
+      },
+      { threshold: 0.5 } 
+    );
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current); 
+    }
+
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current); 
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      const projectsInterval = setInterval(() => {
+        if (completedProjects < 30) {
+          setCompletedProjects((prev) => prev + 1);
+        } else {
+          clearInterval(projectsInterval);
+        }
+      }, 40); 
+
+      const experienceInterval = setInterval(() => {
+        if (yearsOfExperience < 2.5) {
+          setYearsOfExperience((prev) => prev + 0.1);
+        } else {
+          clearInterval(experienceInterval);
+        }
+      }, 40); 
+
+      return () => {
+        clearInterval(projectsInterval);
+        clearInterval(experienceInterval);
+      };
+    }
+  }, [isVisible, completedProjects, yearsOfExperience]);
+
   return (
     <motion.div 
       className="about"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
+      ref={aboutRef} // Attach the ref to the About section
     >
       <motion.h1 
         className="about__heading"
@@ -40,11 +93,11 @@ const About = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           >
             <div className="stat-box">
-              <h2>30+</h2>
+              <h2>{completedProjects}+</h2>
               <p>Completed Projects</p>
             </div>
             <div className="stat-box">
-              <h2>2.5+</h2>
+              <h2>{yearsOfExperience.toFixed(1)}+</h2>
               <p>Years of Experience</p>
             </div>
           </motion.div>
