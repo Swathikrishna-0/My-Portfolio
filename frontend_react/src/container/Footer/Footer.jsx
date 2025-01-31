@@ -46,7 +46,6 @@ const Footer = () => {
 
   return (
     <>
-      {" "}
       <motion.h1
         className="footer__head"
         initial={{ opacity: 0, y: -20 }}
@@ -58,8 +57,17 @@ const Footer = () => {
       <div className="main__footer">
         <div className="footer__container">
           {!isFormSubmitted ? (
-            <div className="form__container">
-              <div className="input__group">
+            <motion.div
+              className="form__container"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <motion.div
+                className="input__group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
                 <RiUser3Fill className="input__icon" />
                 <input
                   type="text"
@@ -68,8 +76,12 @@ const Footer = () => {
                   value={name}
                   onChange={handleChangeInput}
                 />
-              </div>
-              <div className="input__group">
+              </motion.div>
+              <motion.div
+                className="input__group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
                 <AiFillMail className="input__icon" />
                 <input
                   type="email"
@@ -78,8 +90,12 @@ const Footer = () => {
                   value={email}
                   onChange={handleChangeInput}
                 />
-              </div>
-              <div className="input__group">
+              </motion.div>
+              <motion.div
+                className="input__group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
                 <AiFillMessage className="input__icon" />
                 <textarea
                   placeholder="Your Message"
@@ -87,43 +103,45 @@ const Footer = () => {
                   value={message}
                   onChange={handleChangeInput}
                 />
-              </div>
-              <button type="button" onClick={handleSubmit}>
+              </motion.div>
+              <motion.button
+                type="button"
+                onClick={handleSubmit}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
                 {!loading ? "Submit" : "Submitting..."}
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
           ) : (
-            <div className="message_note">
+            <motion.div
+              className="message_note"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
               <h3>Thank you for getting in touch!</h3>
-            </div>
+            </motion.div>
           )}
         </div>
         <motion.div
           className="app__social__footer"
           style={{ marginTop: "40px" }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
         >
-          {[
-            {
-              href: "https://www.linkedin.com/in/swathipriyamoru/",
-              icon: <BsLinkedin size={30} />,
-            },
-            {
-              href: "https://www.instagram.com/swathipriya_0/",
-              icon: <BsInstagram size={30} />,
-            },
-            {
-              href: "https://github.com/Swathikrishna-0",
-              icon: <BsGithub size={30} />,
-            },
-            {
-              href: "https://www.codingninjas.com/studio/profile/SwathiPriya",
-              icon: <TbHeartCode size={30} />,
-            },
+          {[{ href: "https://www.linkedin.com/in/swathipriyamoru/", icon: <BsLinkedin size={30} /> },
+            { href: "https://www.instagram.com/swathipriya_0/", icon: <BsInstagram size={30} /> },
+            { href: "https://github.com/Swathikrishna-0", icon: <BsGithub size={30} /> },
+            { href: "https://www.codingninjas.com/studio/profile/SwathiPriya", icon: <TbHeartCode size={30} /> }
           ].map((social, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.2, rotate: 10 }}
               whileTap={{ scale: 0.9 }}
+              transition={{ duration: 0.2 }}
             >
               <a href={social.href} target="_blank" rel="noopener noreferrer">
                 {social.icon}

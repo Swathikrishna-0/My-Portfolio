@@ -5,15 +5,14 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { FaGoogle } from "react-icons/fa";
-import { FaDev } from "react-icons/fa";
-import { TbTriangleSquareCircle } from "react-icons/tb";
+import { MdOutlineWork } from "react-icons/md";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Experiences.scss";
 
 const Experiences = () => {
   return (
     <div style={{ width: "100%" }} className="app__skills-exp">
+      {/* Animate the header with a fade-in effect */}
       <motion.h1
         className="experiences__head"
         initial={{ opacity: 0, y: -20 }}
@@ -22,7 +21,15 @@ const Experiences = () => {
       >
         WORK <span>EXPERIENCE</span>
       </motion.h1>
-      <div className="app__skills-exp-item">
+
+      {/* Animate the experience timeline container */}
+      <motion.div
+        className="app__skills-exp-item"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+      >
+        {/* Animate the vertical timeline */}
         <motion.div
           className=""
           style={{
@@ -31,6 +38,9 @@ const Experiences = () => {
             alignItems: "center",
             width: "100%",
           }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
         >
           <VerticalTimeline className="custom-timeline2" lineColor="white">
             <VerticalTimelineElement
@@ -42,7 +52,10 @@ const Experiences = () => {
               }}
               contentStyle={{ background: "black", color: "#fff" }}
               iconStyle={{ background: "#fff", color: "#E82E81" }}
-              icon={<FaGoogle />}
+              icon={<MdOutlineWork />}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
             >
               <h3
                 className="vertical-timeline-element-title--left"
@@ -54,10 +67,10 @@ const Experiences = () => {
                 Software Engineer
               </h4>
               <p style={{ color: "rgba(255, 255, 255, 0.56)" }}>
-                Managed Visual Studio Enterprise license tickets and software inventories using ServiceNow. Handled change requests for uninstalling outdated or unlicensed software. Resolved software incidents, runtime errors, and license requests for tools like Docker and Beyond Compare. Ensured system stability and enforced proper licensing standards. Supported vulnerability and incident
-                tracking (VIT) for Python, Git, Visual Studio, VS Code, and Java. Used Azure DevOps for user stories and Power BI for data analysis and reporting.
+                Managed Visual Studio Enterprise license tickets and software inventories using ServiceNow. Handled change requests for uninstalling outdated or unlicensed software. Resolved software incidents, runtime errors, and license requests for tools like Docker and Beyond Compare. Ensured system stability and enforced proper licensing standards. Supported vulnerability and incident tracking (VIT) for Python, Git, Visual Studio, VS Code, and Java. Used Azure DevOps for user stories and Power BI for data analysis and reporting.
               </p>
             </VerticalTimelineElement>
+
             <VerticalTimelineElement
               className="vertical-timeline-element--right"
               date="Jul 2022 - Mar 2023"
@@ -67,28 +80,25 @@ const Experiences = () => {
               }}
               contentStyle={{ background: "black", color: "#fff" }}
               iconStyle={{ background: "#fff", color: "#E82E81" }}
-              icon={<FaGoogle />}
+              icon={<MdOutlineWork />}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
             >
               <h3
                 className="vertical-timeline-element-title"
                 style={{ fontWeight: "bold" }}
               >
-                Techsophy
+                Preludesys
               </h3>
               <h4 className="vertical-timeline-element-subtitle">
-                Full stack Developer Intern
+                Trainee Software Engineer
               </h4>
               <p style={{ color: "rgba(255, 255, 255, 0.56)" }}>
-                Developed and maintained the Recovery Assist Platform as a
-                Fullstack Developer. Fixed UI issues and optimized application
-                performance using Google Analytics. Worked with ReactJS,
-                JavaScript, DynamoDB, MUI, and AWS for project stability.
-                Trained in Dynamics 365 Business Central and CRM development.
-                Wrote well-designed, testable code to improve functionality.
-                Collaborated with product managers, designers, and QA teams to
-                meet project goals.
+                Developed and maintained the Recovery Assist Platform as a Fullstack Developer. Fixed UI issues and optimized application performance using Google Analytics. Worked with ReactJS, JavaScript, DynamoDB, MUI, and AWS for project stability. Trained in Dynamics 365 Business Central and CRM development. Wrote well-designed, testable code to improve functionality. Collaborated with product managers, designers, and QA teams to meet project goals.
               </p>
             </VerticalTimelineElement>
+
             <VerticalTimelineElement
               className="vertical-timeline-element--left"
               date="Mar 2021 - Jun 2022"
@@ -98,7 +108,10 @@ const Experiences = () => {
               }}
               contentStyle={{ background: "black", color: "#fff" }}
               iconStyle={{ background: "#fff", color: "#E82E81" }}
-              icon={<FaDev />}
+              icon={<MdOutlineWork />}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
             >
               <h3
                 className="vertical-timeline-element-title--left"
@@ -110,11 +123,10 @@ const Experiences = () => {
                 Teaching Assistant
               </h4>
               <p style={{ color: "rgba(255, 255, 255, 0.56)" }}>
-                Assisted students with technical queries on the MERN
-                stack.Clarified doubts to improve subject understanding.
-                Supported better learning outcomes through guidance.
+                Assisted students with technical queries on the MERN stack. Clarified doubts to improve subject understanding. Supported better learning outcomes through guidance.
               </p>
             </VerticalTimelineElement>
+
             <VerticalTimelineElement
               className="vertical-timeline-element--right"
               date="Nov 2021 - Feb 2022"
@@ -124,7 +136,10 @@ const Experiences = () => {
               }}
               contentStyle={{ background: "black", color: "#fff" }}
               iconStyle={{ background: "#fff", color: "#E82E81" }}
-              icon={<TbTriangleSquareCircle />}
+              icon={<MdOutlineWork />}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
             >
               <h3
                 className="vertical-timeline-element-title"
@@ -136,16 +151,12 @@ const Experiences = () => {
                 Frontend Developer, Intern
               </h4>
               <p style={{ color: "rgba(255, 255, 255, 0.56)" }}>
-                Developed responsive web pages using HTML, CSS, JavaScript, and
-                Bootstrap. Integrated Django components and managed version
-                control with Git. Built static and dynamic web pages for an
-                e-commerce website. Showcased strong work ethic, adaptability,
-                and teamwork as an intern.
+                Developed responsive web pages using HTML, CSS, JavaScript, and Bootstrap. Integrated Django components and managed version control with Git. Built static and dynamic web pages for an e-commerce website. Showcased strong work ethic, adaptability, and teamwork as an intern.
               </p>
             </VerticalTimelineElement>
           </VerticalTimeline>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };
