@@ -50,7 +50,7 @@
 .app__skills-item {
   flex-direction: column;
   text-align: center;
-  margin: 0.5rem; // Reduced margin
+  margin: 0.5rem; 
   transition: all 0.3s ease-in-out;
 
   div {
@@ -91,7 +91,7 @@
   }
 
   @media screen and (min-width: 2000px) {
-    margin: 0.75rem; // Adjusted margin for larger screens
+    margin: 0.75rem; 
 
     p {
       margin-top: 0.75rem;

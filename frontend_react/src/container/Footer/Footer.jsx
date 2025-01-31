@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
 import "./Footer.scss";
-import { AiFillMail, AiFillPhone } from "react-icons/ai";
-import { TiLocation } from "react-icons/ti";
-import { BiDownload } from "react-icons/bi";
-import { images } from "../../constants";
-import { SocialMedia } from "../../components";
+import { AiFillMail } from "react-icons/ai";
+import { RiUser3Fill } from "react-icons/ri";
+import { AiFillMessage } from "react-icons/ai";
+import { motion } from "framer-motion";
+import { BsLinkedin, BsInstagram, BsGithub } from "react-icons/bs";
+import { TbHeartCode } from "react-icons/tb";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -17,7 +18,7 @@ const Footer = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const { username, email, message } = formData;
+  const { name, email, message } = formData;
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -29,7 +30,7 @@ const Footer = () => {
 
     const contact = {
       _type: "contact",
-      name: formData.username,
+      name: formData.name,
       email: formData.email,
       message: formData.message,
     };
@@ -45,63 +46,31 @@ const Footer = () => {
 
   return (
     <>
+      {" "}
+      <motion.h1
+        className="footer__head"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        LET'S WORK <span>TOGETHER</span>
+      </motion.h1>
       <div className="main__footer">
-        <h2 className="head-text" style={{ color: "white", margin: "35px" }}>
-          Contact
-        </h2>
-        <div className="footer__contianer">
-          <div className="contact_container">
-            <h2 className="p-text head__drop">Drop a Message</h2>
-            <p className="p-text">
-              Thank you for taking the time to explore my portfolio. I'm
-              passionate about my work and always eager to embark on new
-              creative journeys. If you have any questions or opportunities to
-              discuss, please don't hesitate to reach out. Let's create
-              something remarkable together!
-            </p>
-            <div className="contact_card">
-              <div className="icon__style">
-                <AiFillMail style={{ color: "white" }} className="icons" />
-              </div>
-              <a href="mailto:swathipriyamoru@gmail.com" className="p-text">
-                swathipriyamoru@gmail.com
-              </a>
-            </div>
-            <div className="contact_card">
-              <div className="icon__style">
-                <AiFillPhone style={{ color: "white" }} className="icons" />
-              </div>
-              <a href="tel:+91 9912576665" className="p-text">
-                +91 9912576665
-              </a>
-            </div>
-            <div className="contact_card">
-              <div className="icon__style">
-                <TiLocation style={{ color: "white" }} className="icons" />
-              </div>
-              <a
-                href="https://maps.app.goo.gl/GxsypGtZs9MsjrUb6"
-                className="p-text"
-              >
-                3-156, Narayanapuram, <br /> Unguturu Mandal, West Godavari
-                District, <br />
-                Andhra Pradesh, India 534406.
-              </a>
-            </div>
-          </div>
+        <div className="footer__container">
           {!isFormSubmitted ? (
-            <div className="message__container">
-              <div>
+            <div className="form__container">
+              <div className="input__group">
+                <RiUser3Fill className="input__icon" />
                 <input
-                  className="p-text"
                   type="text"
                   placeholder="Your Name"
-                  name="username"
-                  value={username}
+                  name="name"
+                  value={name}
                   onChange={handleChangeInput}
                 />
               </div>
-              <div>
+              <div className="input__group">
+                <AiFillMail className="input__icon" />
                 <input
                   type="email"
                   placeholder="Your Email"
@@ -110,18 +79,17 @@ const Footer = () => {
                   onChange={handleChangeInput}
                 />
               </div>
-              <div>
+              <div className="input__group">
+                <AiFillMessage className="input__icon" />
                 <textarea
                   placeholder="Your Message"
-                  value={message}
                   name="message"
-                  type="text"
+                  value={message}
                   onChange={handleChangeInput}
-                  className="textareaa"
                 />
               </div>
               <button type="button" onClick={handleSubmit}>
-                {!loading ? "Send Message" : "Sending..."}
+                {!loading ? "Submit" : "Submitting..."}
               </button>
             </div>
           ) : (
@@ -130,17 +98,39 @@ const Footer = () => {
             </div>
           )}
         </div>
-        <div className="button-resume">
-          <a href={images.resume} download style={{ textDecoration: "none" }}>
-            <button className="resume-button">
-              <BiDownload fontSize={20} />
-              &nbsp;&nbsp;Download Resume
-            </button>
-          </a>
-        </div>
-        <div className="social__media">
-          <SocialMedia />
-        </div>
+        <motion.div
+          className="app__social__footer"
+          style={{ marginTop: "40px" }}
+        >
+          {[
+            {
+              href: "https://www.linkedin.com/in/swathipriyamoru/",
+              icon: <BsLinkedin size={30} />,
+            },
+            {
+              href: "https://www.instagram.com/swathipriya_0/",
+              icon: <BsInstagram size={30} />,
+            },
+            {
+              href: "https://github.com/Swathikrishna-0",
+              icon: <BsGithub size={30} />,
+            },
+            {
+              href: "https://www.codingninjas.com/studio/profile/SwathiPriya",
+              icon: <TbHeartCode size={30} />,
+            },
+          ].map((social, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.2, rotate: 10 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <a href={social.href} target="_blank" rel="noopener noreferrer">
+                {social.icon}
+              </a>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </>
   );

@@ -1,41 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.scss";
 
 const Navbar = () => {
-  return (
-    <nav className="app__navbar">
-      <div className="app_navvvv">
-        <ul className="app__navbar-links">
-          {[
-            "home",
-            "about",
-            "projects",
-            "skills",
-            "education",
-            "experience",
-          ].map((item) => (
-            <li className="app__flex p-text linkss" key={`link-${item}`}>
-              <a href={`#${item}`}>{item}</a>
-            </li>
-          ))}
-          <li className="app__flex p-text contact__nav">
-            <a href="#contact" style={{ color: "white",fontSize:"0.8rem" }}>
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-      <div className="nav_menu_div">
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  return (
+    <>
+      <nav className="app__navbar">
+        <div className="app_navvvv">
+          <ul className="app__navbar-links">
+            {[
+              "home",
+              "about",
+              "projects",
+              "skills",
+              "education",
+              "experience",
+            ].map((item) => (
+              <li className="app__flex p-text linkss" key={`link-${item}`}>
+                <a href={`#${item}`}>{item}</a>
+              </li>
+            ))}
+            <li className="app__flex p-text contact__nav">
+              <a href="#contact" style={{ color: "white", fontSize: "0.8rem" }}>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
         <button
           id="dropdownMenuIconButton"
-          data-dropdown-toggle="dropdownDots"
-          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          type="button"
           className="nav_menu_icon"
+          onClick={toggleMobileMenu}
         >
           <svg
-            class="w-5 h-5"
+            className="w-5 h-5"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -44,16 +47,11 @@ const Navbar = () => {
             <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
           </svg>
         </button>
+      </nav>
 
-        <div
-          id="dropdownDots"
-          class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-50 dark:bg-gray-700 dark:divide-gray-600"
-          className="menubutton"
-        >
-          <ul
-            class="py-2 text-sm text-white-700 dark:text-white-200"
-            aria-labelledby="dropdownMenuIconButton"
-          >
+      {isMobileMenuOpen && (
+        <div className="mobile__menu">
+          <ul className="mobile__menu-links">
             {[
               "home",
               "about",
@@ -64,13 +62,15 @@ const Navbar = () => {
               "contact",
             ].map((item) => (
               <li key={`link-${item}`} className="app__flex p-text side__nav_bar">
-                <a href={`#${item}`} className="anchortag">{item}</a>
+                <a href={`#${item}`} onClick={toggleMobileMenu}>
+                  {item}
+                </a>
               </li>
             ))}
           </ul>
         </div>
-      </div>
-    </nav>
+      )}
+    </>
   );
 };
 

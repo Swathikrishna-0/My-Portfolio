@@ -1,229 +1,155 @@
 import React from "react";
 import { motion } from "framer-motion";
-// import { Tooltip as ReactTooltip } from "react-tooltip";
-// import { AppWrap } from "../../wrapper";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { FaGoogle } from "react-icons/fa";
+import { FaDev } from "react-icons/fa";
+import { TbTriangleSquareCircle } from "react-icons/tb";
 import { AppWrap, MotionWrap } from "../../wrapper";
-// import { client } from "../../client";
-// import Tooltip from '@mui/material/Tooltip';
 import "./Experiences.scss";
 
 const Experiences = () => {
-  // const [experiences, setExperiences] = useState([]);
-
-  // useEffect(() => {
-  //   const query = '*[_type == "experiences"]';
-
-  //   client.fetch(query).then((data) => {
-  //     setExperiences(data);
-  //   });
-  // }, []);
-
   return (
-    <>
-      <h2 className="head-text" style={{ color: "white" }}>
-        Education and <span style={{ color: "#483CC2" }}>Work Experience</span>
-      </h2>
-      <div className="app__skills-exp">
-        {/* {experiences.map((experience) => ( */}
-        <motion.div className="app__skills-exp-item">
-          <>
-            <div className="education education22">
-              <div className="app__skills-exp-year">
-                <p className="bold-text" style={{ color: "#483CC2" }}>
-                  Aug 2018 - Mar 2022
-                </p>
-              </div>
-              <motion.div className="app__skills-exp-works">
-                {/* {experience.works.map((work) => ( */}
-                <>
-                  <motion.div
-                    whileInView={{ opacity: [0, 1] }}
-                    transition={{ duration: 0.5 }}
-                    className="app__skills-exp-work"
-                    data-tip
-                    // data-for={work.name}
-                    // key={work.name}
-                  >
-                    <h4 className="bold-text" style={{ color: "white" }}>
-                      B.tech(Electronics & Communication Engineering)
-                    </h4>
-                    <p
-                      className="p-text"
-                      style={{
-                        color: "#4f9ed7",
-                        fontStyle: "italic",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      IIIT Nuzvid
-                    </p>
-                    {/* <p className="p-text-desc" style={{ color: "#cbcbcb" }}>IIIT Nuzvid</p> */}
-                  </motion.div>
-                  {/* <Tooltip title={"Work Description"} className="p-text-desc">
-                    <button sx={{ m: 1 }}>{work.desc}</button>
-                  </Tooltip> */}
-                </>
-                {/* ))} */}
-              </motion.div>
-            </div>
-            <div className="education">
-              <div className="app__skills-exp-year">
-                <p className="bold-text" style={{ color: "#483CC2" }}>
-                  Nov 2021 - Jun 2022
-                </p>
-              </div>
-              <motion.div className="app__skills-exp-works">
-                {/* {experience.works.map((work) => ( */}
-                <>
-                  <motion.div
-                    whileInView={{ opacity: [0, 1] }}
-                    transition={{ duration: 0.5 }}
-                    className="app__skills-exp-work"
-                    data-tip
-                    // data-for={work.name}
-                    // key={work.name}
-                  >
-                    <h4 className="bold-text" style={{ color: "white" }}>
-                      MERN Full-Stack Development(CCBP 4.0)
-                    </h4>
-                    <p
-                      className="p-text"
-                      style={{
-                        color: "#4f9ed7",
-                        fontStyle: "italic",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      NXTWAVE
-                    </p>
-                    {/* <p className="p-text-desc" style={{ color: "#cbcbcb" }}></p> */}
-                  </motion.div>
-                  {/* <Tooltip title={"Work Description"} className="p-text-desc">
-                    <button sx={{ m: 1 }}>{work.desc}</button>
-                  </Tooltip> */}
-                </>
-                {/* ))} */}
-              </motion.div>
-            </div>
-          </>
+    <div style={{ width: "100%" }} className="app__skills-exp">
+      <motion.h1
+        className="experiences__head"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        WORK <span>EXPERIENCE</span>
+      </motion.h1>
+      <div className="app__skills-exp-item">
+        <motion.div
+          className=""
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+          }}
+        >
+          <VerticalTimeline className="custom-timeline2" lineColor="white">
+            <VerticalTimelineElement
+              className="vertical-timeline-element--left"
+              date="May 2024 - Aug 2024"
+              dateClassName="dateClass"
+              contentArrowStyle={{
+                borderRight: "7px solid #E82E81",
+              }}
+              contentStyle={{ background: "black", color: "#fff" }}
+              iconStyle={{ background: "#fff", color: "#E82E81" }}
+              icon={<FaGoogle />}
+            >
+              <h3
+                className="vertical-timeline-element-title--left"
+                style={{ fontWeight: "bold" }}
+              >
+                Humana
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle--left">
+                Software Engineer
+              </h4>
+              <p style={{ color: "rgba(255, 255, 255, 0.56)" }}>
+                Managed Visual Studio Enterprise license tickets and software inventories using ServiceNow. Handled change requests for uninstalling outdated or unlicensed software. Resolved software incidents, runtime errors, and license requests for tools like Docker and Beyond Compare. Ensured system stability and enforced proper licensing standards. Supported vulnerability and incident
+                tracking (VIT) for Python, Git, Visual Studio, VS Code, and Java. Used Azure DevOps for user stories and Power BI for data analysis and reporting.
+              </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--right"
+              date="Jul 2022 - Mar 2023"
+              dateClassName="dateClass"
+              contentArrowStyle={{
+                borderRight: "7px solid #E82E81",
+              }}
+              contentStyle={{ background: "black", color: "#fff" }}
+              iconStyle={{ background: "#fff", color: "#E82E81" }}
+              icon={<FaGoogle />}
+            >
+              <h3
+                className="vertical-timeline-element-title"
+                style={{ fontWeight: "bold" }}
+              >
+                Techsophy
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Full stack Developer Intern
+              </h4>
+              <p style={{ color: "rgba(255, 255, 255, 0.56)" }}>
+                Developed and maintained the Recovery Assist Platform as a
+                Fullstack Developer. Fixed UI issues and optimized application
+                performance using Google Analytics. Worked with ReactJS,
+                JavaScript, DynamoDB, MUI, and AWS for project stability.
+                Trained in Dynamics 365 Business Central and CRM development.
+                Wrote well-designed, testable code to improve functionality.
+                Collaborated with product managers, designers, and QA teams to
+                meet project goals.
+              </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--left"
+              date="Mar 2021 - Jun 2022"
+              dateClassName="dateClass"
+              contentArrowStyle={{
+                borderRight: "7px solid #E82E81",
+              }}
+              contentStyle={{ background: "black", color: "#fff" }}
+              iconStyle={{ background: "#fff", color: "#E82E81" }}
+              icon={<FaDev />}
+            >
+              <h3
+                className="vertical-timeline-element-title--left"
+                style={{ fontWeight: "bold" }}
+              >
+                NxtWave
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle--left">
+                Teaching Assistant
+              </h4>
+              <p style={{ color: "rgba(255, 255, 255, 0.56)" }}>
+                Assisted students with technical queries on the MERN
+                stack.Clarified doubts to improve subject understanding.
+                Supported better learning outcomes through guidance.
+              </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--right"
+              date="Nov 2021 - Feb 2022"
+              dateClassName="dateClass"
+              contentArrowStyle={{
+                borderRight: "7px solid #E82E81",
+              }}
+              contentStyle={{ background: "black", color: "#fff" }}
+              iconStyle={{ background: "#fff", color: "#E82E81" }}
+              icon={<TbTriangleSquareCircle />}
+            >
+              <h3
+                className="vertical-timeline-element-title"
+                style={{ fontWeight: "bold" }}
+              >
+                Bazarside
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Frontend Developer, Intern
+              </h4>
+              <p style={{ color: "rgba(255, 255, 255, 0.56)" }}>
+                Developed responsive web pages using HTML, CSS, JavaScript, and
+                Bootstrap. Integrated Django components and managed version
+                control with Git. Built static and dynamic web pages for an
+                e-commerce website. Showcased strong work ethic, adaptability,
+                and teamwork as an intern.
+              </p>
+            </VerticalTimelineElement>
+          </VerticalTimeline>
         </motion.div>
-        {/* ))} */}
       </div>
-      <div className="app__skills-exp expp">
-        {/* {experiences.map((experience) => ( */}
-        <motion.div className="app__skills-exp-item">
-          <>
-            <div className="experience">
-              <div className="app__skills-exp-year">
-                <p className="bold-text" style={{ color: "#483CC2" }}>
-                  2021 Nov - 2021 Dec
-                </p>
-              </div>
-              <motion.div className="app__skills-exp-works">
-                {/* {experience.works.map((work) => ( */}
-                <>
-                  <motion.div
-                    whileInView={{ opacity: [0, 1] }}
-                    transition={{ duration: 0.5 }}
-                    className="app__skills-exp-work"
-                    data-tip
-                    // data-for={work.name}
-                    // key={work.name}
-                  >
-                    <h4 className="bold-text" style={{ color: "white" }}>
-                      Frontend Developer
-                    </h4>
-                    <p
-                      className="p-text"
-                      style={{
-                        color: "#4f9ed7",
-                        fontStyle: "italic",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      Bazarside
-                    </p>
-                    <p className="p-text-desc" style={{ color: "#cbcbcb" }}>
-                      ● Worked with technologies like HTML, CSS, JS, Bootstrap,
-                      Git, Python etc.
-                    </p>
-                    <p className="p-text-desc para-none" style={{ color: "#cbcbcb" }}>
-                      ● Enforced website standards for visual and design
-                      integrity.
-                    </p>
-                    <p className="p-text-desc para-none" style={{ color: "#cbcbcb" }}>
-                      ● Built static, dynamic, and responsive web pages,
-                      designed UI for web pages, and developed them.
-                    </p>
-                  </motion.div>
-                  {/* <Tooltip title={"Work Description"} className="p-text-desc">
-                    <button sx={{ m: 1 }}>{work.desc}</button>
-                  </Tooltip> */}
-                </>
-                {/* ))} */}
-              </motion.div>
-            </div>
-            <div className="experience education223" >
-              <div className="app__skills-exp-year">
-                <p className="bold-text" style={{ color: "#483CC2" }}>
-                  2022 Jul - 2023 Mar
-                </p>
-              </div>
-              <motion.div className="app__skills-exp-works">
-                {/* {experience.works.map((work) => ( */}
-                <>
-                  <motion.div
-                    whileInView={{ opacity: [0, 1] }}
-                    transition={{ duration: 0.5 }}
-                    className="app__skills-exp-work"
-                    data-tip
-                    // data-for={work.name}
-                    // key={work.name}
-                  >
-                    <h4 className="bold-text" style={{ color: "white" }}>
-                      Trainee Software Engineer
-                    </h4>
-                    <p
-                      className="p-text"
-                      style={{
-                        color: "#4f9ed7",
-                        fontStyle: "italic",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      Preludesys Ind Ltd
-                    </p>
-                    <p className="p-text-desc" style={{ color: "#cbcbcb" }}>
-                      ● Worked on a real-time project for 7 months as a
-                      Fullstack Support Developer for a US-based project named
-                      Recovery Assist Platform.
-                    </p> 
-                    <p className="p-text-desc para-none" style={{ color: "#cbcbcb" }}>
-                      ● Leveraged mastery of React JS, CSS, and JavaScript to
-                      build top-quality code for diverse projects.
-                    </p>
-                    <p className="p-text-desc para-none" style={{ color: "#cbcbcb" }}>
-                      ● Got trained in Dynamics 365 Business Central and CRM as
-                      a Technical Developer Consultant.
-                    </p>
-                  </motion.div>
-                  {/* <Tooltip title={"Work Description"} className="p-text-desc">
-                    <button sx={{ m: 1 }}>{work.desc}</button>
-                  </Tooltip> */}
-                </>
-                {/* ))} */}
-              </motion.div>
-            </div>
-          </>
-        </motion.div>
-        {/* ))} */}
-      </div>
-    </>
+    </div>
   );
 };
 
-// export default Experiences
-// export default AppWrap(Experiences, "app__skills-exp"),'experience';
 export default AppWrap(
   MotionWrap(Experiences, "app__about"),
   "experience",
