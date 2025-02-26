@@ -67,7 +67,7 @@ const Experiences = () => {
                 Software Engineer
               </h4>
               <p style={{ color: "rgba(255, 255, 255, 0.56)" }}>
-                Managed Visual Studio Enterprise license tickets and software inventories using ServiceNow. Handled change requests for uninstalling outdated or unlicensed software. Resolved software incidents, runtime errors, and license requests for tools like Docker and Beyond Compare. Ensured system stability and enforced proper licensing standards. Supported vulnerability and incident tracking (VIT) for Python, Git, Visual Studio, VS Code, and Java. Used Azure DevOps for user stories and Power BI for data analysis and reporting.
+              Developed an email automation utility using C#, .NET, and JavaScript to generate and send personalized emails. Built a release monitor utility with Python and web scraping to automate software version tracking from Excel input. Implemented a Power BI dashboard to visualize license usage for tools like Docker, Redgate, and Visual Studio. Resolved software incidents, managed licenses, and remediated security vulnerabilities for Python, Git, and PowerShell. Collaborated with teams on patching, compliance, and UAT testing to ensure enterprise software stability and security.
               </p>
             </VerticalTimelineElement>
 
