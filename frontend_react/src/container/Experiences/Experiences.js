@@ -45,7 +45,7 @@ const Experiences = () => {
           <VerticalTimeline className="custom-timeline2" lineColor="white">
             <VerticalTimelineElement
               className="vertical-timeline-element--left"
-              date="May 2024 - Aug 2024"
+              date="Apr 2023 - Present"
               dateClassName="dateClass"
               contentArrowStyle={{
                 borderRight: "7px solid #E82E81",
@@ -61,13 +61,13 @@ const Experiences = () => {
                 className="vertical-timeline-element-title--left"
                 style={{ fontWeight: "bold" }}
               >
-                Humana
+                Freelancer
               </h3>
               <h4 className="vertical-timeline-element-subtitle--left">
-                Software Engineer
+                Software Developer
               </h4>
               <p style={{ color: "rgba(255, 255, 255, 0.56)" }}>
-              Developed an email automation utility using C#, .NET, and JavaScript to generate and send personalized emails. Built a release monitor utility with Python and web scraping to automate software version tracking from Excel input. Implemented a Power BI dashboard to visualize license usage for tools like Docker, Redgate, and Visual Studio. Resolved software incidents, managed licenses, and remediated security vulnerabilities for Python, Git, and PowerShell. Collaborated with teams on patching, compliance, and UAT testing to ensure enterprise software stability and security.
+              Developed and engineered responsive websites with HTML, CSS, JavaScript, ReactJS, NodeJS, Django, and Bootstrap for 5+ clients. Engaged with the Devops team to assess and remediate 5,000+ vulnerabilities in Python, Git, Docker, Java, achieving a 40% reduction. Created 30+ detailed technical documentation for various projects, enhancing clarity, maintainability, and ease of knowledge transfer. Mentored 6+ students in MERN stack, JavaScript, Python, and prompt engineering to enhance technical skills and learning outcomes. Expanded expertise in prompt engineering by leveraging generative AI tools like ChatGPT, Sora, Dall-E, Copilot and Midjourney to produce 100+ technical content and art pieces, streamlining workflows and reducing turnaround time by 35%. Deployed and managed full-stack web applications on DigitalOcean, configuring cloud servers, integrating front-end and back-end components, and ensuring reliable performance and scalability across production environments
               </p>
             </VerticalTimelineElement>
 
@@ -101,7 +101,7 @@ const Experiences = () => {
 
             <VerticalTimelineElement
               className="vertical-timeline-element--left"
-              date="Mar 2021 - Jun 2022"
+              date="Aug 2022 - Feb 2023"
               dateClassName="dateClass"
               contentArrowStyle={{
                 borderRight: "7px solid #E82E81",

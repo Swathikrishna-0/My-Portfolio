@@ -35,7 +35,7 @@ const About = () => {
   useEffect(() => {
     if (isVisible) {
       const projectsInterval = setInterval(() => {
-        if (completedProjects < 30) {
+        if (completedProjects < 35) {
           setCompletedProjects((prev) => prev + 1);
         } else {
           clearInterval(projectsInterval);
@@ -43,7 +43,7 @@ const About = () => {
       }, 40); 
 
       const experienceInterval = setInterval(() => {
-        if (yearsOfExperience < 2.5) {
+        if (yearsOfExperience < 3) {
           setYearsOfExperience((prev) => prev + 0.1);
         } else {
           clearInterval(experienceInterval);
